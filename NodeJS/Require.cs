@@ -7,6 +7,7 @@ namespace NodeJS {
 	[Imported]
 	[ModuleName(null)]
 	[ScriptName("require")]
+    [IgnoreNamespace]
 	public static class Require {
 		/// <summary>
 		/// Equivalent to 'require(module)' in JS.
