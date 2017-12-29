@@ -65,10 +65,10 @@ namespace NodeJS {
 		[IntrinsicProperty]
 		public static dynamic Config { get { return null; } }
 
-		public static void Kill(int pid) {}
-		public static void Kill(int pid, string signal) {}
+		public static bool Kill(int pid) { return false; }
+		public static bool Kill(int pid, TypeOption<string, int> signal) { return false; }
 
-		[IntrinsicProperty]
+        [IntrinsicProperty]
 		public static int Pid { get { return 0; } }
 
 		[IntrinsicProperty]
