@@ -33,22 +33,22 @@ namespace NodeJS.ChildProcessModule {
 
 		public void Disconnect() {}
 
-		public event Action<int, string> OnExit {
+		public event Action<int?, string> OnExit {
 			[InlineCode("{this}.addListener('exit', {value})")] add {}
 			[InlineCode("{this}.removeListener('exit', {value})")] remove {}
 		}
 
 		[InlineCode("{this}.once('exit', {callback})")]
-		public void OnceExit(Action<int, string> callback) {}
+		public void OnceExit(Action<int?, string> callback) {}
 		
 
-		public event Action OnClose {
+		public event Action<int?, string> OnClose {
 			[InlineCode("{this}.addListener('close', {value})")] add {}
 			[InlineCode("{this}.removeListener('close', {value})")] remove {}
 		}
 
 		[InlineCode("{this}.once('close', {callback})")]
-		public void OnceClose(Action callback) {}
+		public void OnceClose(Action<int?, string> callback) {}
 
 
 		public event Action OnDisconnect {
