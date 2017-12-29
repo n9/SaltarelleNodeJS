@@ -23,9 +23,12 @@ namespace NodeJS.ChildProcessModule {
 		[IntrinsicProperty]
 		public int Pid { get; private set; }
 
-		public void Kill() {}
+        [IntrinsicProperty]
+        public bool Connected { get; private set; }
 
-		public void Kill(string signal) {}
+        public bool Kill() { return false; }
+
+		public bool Kill(TypeOption<string, int> signal) { return false; }
 
 		public void Send(object message) {}
 
